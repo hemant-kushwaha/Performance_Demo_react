@@ -1,19 +1,13 @@
-import { useState } from 'react'
 import './App.css'
 import SlowComponent from './SlowComponent'
-import Modal from './Modal';
+import ButtonWithModal from './ButtonWithModal';
 
 function App() {
-  const [isOpen,setISOpen] =useState(false);
 
   return (
     <>
-      <button onClick={()=>setISOpen(true)}>Open Modal</button>
       <div>Something Done here</div>
-      <div>
-      {isOpen && <Modal setISOpen={setISOpen}/>}
-
-      </div>
+      <ButtonWithModal/>
       <div>Something Done here</div>
       <SlowComponent/>
     </>

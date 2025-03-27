@@ -12,5 +12,5 @@ const waitingForSomething = (ms) => {
 
 export default function SlowComponent () {
     waitingForSomething(1000);
-    return null;
+    return <>Hello i am that slow component  </>;
 }
