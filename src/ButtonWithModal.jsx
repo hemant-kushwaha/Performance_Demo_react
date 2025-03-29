@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import useModalDialogBox from './Hooks/useModalDialogBox';
 import Modal from './Modal';
 export default function ButtonWithModal () {
-    const [isOpen,setISOpen] =useState(false);
+    const {isOpen,open,close} = useModalDialogBox();
 
     return (
         <>
-     <button onClick={()=>setISOpen(true)}>Open Modal</button>
+     <button onClick={open}>Open Modal</button>
       <div>
-      {isOpen && <Modal setISOpen={setISOpen}/>}
+      {isOpen && <Modal close= {close}/>}
       </div>
         
         </>

@@ -1,9 +1,9 @@
-export default function Modal ({setISOpen}) {
+export default function Modal ({close}) {
     return (
         <div className="Moda">
             <h5>Modal</h5>
             <p>This is a modal</p>
-            <button onClick={()=>setISOpen(false)}>Close</button>
+            <button onClick={close}>Close</button>
         </div>
     )
 }
